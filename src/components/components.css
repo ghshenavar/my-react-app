@@ -1,0 +1,126 @@
+:root {
+    --main-background-color: #FFFFFF;
+    --main-top-background-color: #FBFEF9;
+    --main-accent-color: #FB8F67;
+    --title-color: #1E2019;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    width: 300px;
+    height:auto;
+    padding: 1rem;
+    font-size: 15px;
+    font-weight: bold;
+    border: 3px solid #ccc !important;
+    border-radius: 10px;
+    background-color: var(--main-background-color);
+}
+
+.card-image {
+    max-width: 100%;
+    height: auto;
+    display:flex;
+    justify-content:center;
+    border: 1px solid #ccc !important;
+    border-radius: 16px;
+}
+
+.button.is-primary {
+    background-color: var(--main-accent-color);
+}
+
+    .button.is-primary:hover {
+        background-color: var(--title-color);
+    }
+
+.title {
+    color: var(--main-accent-color);
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    direction: rtl;
+    font-size: 3em;
+}
+
+
+.product-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 30px;
+    background-color: #d3e2e8;
+    margin: 0 auto;
+}
+
+.product-title {
+    font-size: 2em;
+}
+
+.popup-box {
+    position: fixed;
+    background: #00000050;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.box {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+    max-height: 70vh;
+    margin-top: calc(100vh - 85vh - 20px);
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    border: 1px solid #999;
+    overflow: auto;
+}
+
+.close-icon {
+    content: 'x';
+    cursor: pointer;
+    position: fixed;
+    right: calc(15% - 30px);
+    top: calc(100vh - 85vh - 33px);
+    background: #ededed;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #999;
+    font-size: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+
+.detail-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc !important;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    transform: scale(50%, 50%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
