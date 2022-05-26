@@ -105,22 +105,24 @@
 
 /* Create two equal columns that sits next to each other */
 .column {
-    flex: 50%;
     padding: 10px;
 }
 
 .detail-image {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc !important;
-    border-radius: 16px;
-    display: flex;
-    justify-content: center;
+    border: 3px solid #ccc !important;
+    max-width: 60%;
+}
+
+.desc {
+    font-family: 'Inconsolata', monospace;
+    direction: rtl;
+}
+
+.ImageManage {
+    transform: scale(100%, 100%);
+    max-width:100%;
 }
 
 img {
     transform: scale(50%, 50%);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }

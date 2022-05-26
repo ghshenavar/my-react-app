@@ -23,14 +23,12 @@ function App() {
 
     function handleScroll() {
         if (window.innerHeight + document.documentElement.scrollTop < 999 * (document.documentElement.offsetHeight / 1000)) return;
-        console.log("reached");
         setPageno(pageno + 1);
         getItems(pageno, callBack);
     }
 
 
     function callBack(data) {
-        console.log(data.data.products);
         data.data.products.forEach(addProduct);
     }
 

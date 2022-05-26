@@ -13,7 +13,12 @@ function priceString(price) {
     }
     s += " ریال";
     return s;
-}
+};
+
+function addStrings(addon, original) {
+    return addon + original;
+};
+
 function ProductTile({ product, buttonFunction, showDetail }) {
     return (
         <div className="card">
@@ -35,7 +40,7 @@ function ProductTile({ product, buttonFunction, showDetail }) {
             </div>
         </div>
     )
-}
+};
 
 function ProductCatalog({ products, buttonFunction, showDetail }) {
     let tiles = [];
@@ -45,7 +50,7 @@ function ProductCatalog({ products, buttonFunction, showDetail }) {
         tiles.push(<ProductTile product={current_item} buttonFunction={buttonFunction} showDetail={showDetail} />);
         }
     return (<div className="product-catalog"> {tiles} </div>);
-}
+};
 
 function Popup({ data, handleClose }) {
     return (
@@ -61,17 +66,19 @@ function Popup({ data, handleClose }) {
 function DetailPage({ product }) {
     return (
         <div className="row">
-            <div classNmae="column">
+            <div className="column">
                 <div className="detail-image">
-                    <img src={product.data.product.images.main.url[0]} alt="new"></img>
+                    <img className="ImageManage" src={product.data.product.images.main.url[0]} alt="new"></img>
                 </div>
             </div>
             <div className="column">
                 <p className="title product-title">{product.data.product["title_fa"]}</p>
-                <div class="content">
+                <div className="content">
                     {priceString(product.data.product.default_variant.price.selling_price)}
                     <br></br>
                 </div>
+                <p className="desc">{addStrings("برند: ", product.data.product.brand.title_fa)}</p>
+                <p className="desc">{addStrings("درصد رضایتمندی: ", product.data.product.rating.rate)}</p>
             </div>
         </div>
     );
